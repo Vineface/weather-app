@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Weather App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Search for the current weather in a city">
+    <meta name="keywords" content="Location, Weather, ,Temperature,Humidity,City,Cloud,Celsius">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="taskstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div id="header">
+        <h2 id="title">Weather App</h2>
+        <div onclick="myTheme()" class="material-icons-round" id="toggle" title="Toggle dark/light mode">
+            light_mode
+        </div>
+    </div>
+    <div id="main-container">
+        <div id="location">
+            <input type="search" id="search" placeholder="Search for City" tabindex="1">
+            <button class="material-icons-round" id="searchbtn" onclick="components.search()" title="Search for city">
+                search
+            </button>
+        </div>
+        <div class="card load">
+            <h2 class="city"></h2>
+            <h1 class="temperature"></h1>
+            <div id="icon-weather">
+                <img class="icon" src="" alt="Weather Icon">
+                <div class="weather-state"></div>
+            </div>
+            <div id="details">
+                <div class="humidity"></div>
+                <div class="wind-speed"></div>
+                <div class="maxtemp"></div>
+                <div class="mintemp"></div>
+                <div class="date"></div>
+            </div>
+        </div>
+    </div>
+
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+    <script src="/weather.js" defer></script>
+</body>
